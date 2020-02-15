@@ -5,7 +5,7 @@
 
 const range = function(start,end) {
     let myArray = [];
-    for (let i = start; i < end; i++); {
+    for (let i = start; i < end; i++) {
         myArray.push (i);
     }
     return myArray;
@@ -17,6 +17,22 @@ const range = function(start,end) {
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
 
+const range2 = function(start,end) {
+    let myArray = [];
+    for (let i = start; i <= end; i++) {
+        myArray.push (i);
+    }
+    return myArray;
+};
+
+const sum = function(array)
+{
+  let sum = 0;
+  for(let n of array) {sum+=n;}
+  return sum;
+}
+  
+console.log(sum(range2(1, 10)));
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
@@ -31,3 +47,4 @@ const range = function(start,end) {
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
